@@ -5,7 +5,7 @@ How to install:
 
 - pip install requirements.txt
 
-Running the file CMD or Terminal: 
+Running the file CMD or Terminal, type the following: 
 
-python3 main.py --username test@gmail.com --password testpassword123$
+python3 main.py --username test@gmail.com --password testpassword123
 
