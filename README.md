@@ -1,7 +1,7 @@
 # automated_facebook_friend_removal
 A simple script to remove facebook friends for you.
 
-How to install:
+How to install dependencies:
 
 ```bash
 pip install requirements.txt
