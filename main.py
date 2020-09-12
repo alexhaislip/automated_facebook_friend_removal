@@ -1,7 +1,7 @@
 from selenium import webdriver  
 import argparse
 import os
-from functions import friendsornot
+from functions import delete_friends
 import time
 
 def main():
@@ -9,7 +9,6 @@ def main():
     options = webdriver.ChromeOptions()
     options.add_argument("--disable-notifications")
     options.add_argument("--disable-popup-blocking")
-    options.add_argument("--headless")
 
     parser = argparse.ArgumentParser()
     parser.add_argument('--username', required=True)
@@ -31,7 +30,7 @@ def main():
                                                      '1]/div[1]/div/div/div[4]/div/div/div/div/div/div/div/div['
                                                      '3]/div[1]/div[3]/div/div/div')
 
-    friendsornot(driver,time)
+    delete_friends(driver, time)
 
 if __name__ == '__main__':
     main()
