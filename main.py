@@ -1,10 +1,30 @@
-from selenium import webdriver  
 import argparse
 import os
-from functions import delete_friends
 import time
+import PySimpleGUI as sg
+
+from selenium import webdriver
+
+from functions import delete_friends
+
 
 def main():
+
+    layout = [[sg.Text('Simple Window')],
+              [sg.InputText()],
+              [sg.Submit()],
+              [sg.Cancel()]]
+
+    window = sg.Window('Window title', layout)
+    event, value = window.read()
+    window.close()
+    text_input = value[0]
+    sg.popup('You enterd', text_input)
+
+    # TODO GUI updates below:
+    # need username and password in gui (also friend list config)
+    # limit friend adds and deletes, and other stuff
+    # run button
 
     options = webdriver.ChromeOptions()
     options.add_argument("--disable-notifications")
